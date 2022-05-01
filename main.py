@@ -1,4 +1,4 @@
-
+#for performing tests
 tests_cases = [
     {'input': {'nums': [0, 1, 3, 4, 7, 10, 11, 13], 'target': 7}, 'output': 4},
     {'input': {'nums': [0, 1, 3, 4, 7, 10, 11, 13], 'target': 1}, 'output': 1},
@@ -14,6 +14,7 @@ tests_cases = [
      'output': 7}
 ]
 
+#checks if number is the first occurrence in situation where numbers are not unique
 
 def test_occurence(nums, target, mid):
     if nums[mid] == target:
@@ -29,12 +30,10 @@ def test_occurence(nums, target, mid):
         return -1
 
 
-
+#searches for target
 def find_target(nums, target):
     lo_index = 0
     hi_index = len(nums)-1
-
-
 
     while lo_index<=hi_index:
         mid_index = (lo_index + hi_index) // 2
@@ -48,6 +47,7 @@ def find_target(nums, target):
     return -1
 
 
+#performs the tests
 def evaluate_test_cases():
     for test_case in tests_cases:
         pass_status = ""
@@ -56,9 +56,10 @@ def evaluate_test_cases():
             pass_status = "PASSED"
         else:
             pass_status = "FAILED"
+        print(
+            f"input: {test_case['input']}, expected output: {test_case['output']}, actual output: {results}, {pass_status} ")
 
-        print(f"input: {test_case['input']}, expected output: {test_case['output']}, actual output: {results}, {pass_status} ")
 
 
 
-print(evaluate_test_cases())
+evaluate_test_cases()
