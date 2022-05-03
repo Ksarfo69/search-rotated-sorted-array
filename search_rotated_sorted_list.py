@@ -42,7 +42,7 @@ def evaluate_test_cases():
             pass_status = "PASSED"
         else:
             pass_status = "FAILED"
-        print(f"input: {test_case['input']}, expected output: {test_case['output']}, actual output: {results}, {pass_status}")
+        print(f"input: {test_case['input']}, expected output,: {test_case['output']}, actual output: {results}, {pass_status}")
 
 
 
